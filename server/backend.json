@@ -1,0 +1,27 @@
+{
+ "family":"backend-task",
+ "networkMode":"bridge",
+ "containerDefinitions": [
+  {
+   "name":"backend",
+   "image":"438679586607.dkr.ecr.ap-south-1.amazonaws.com/backend:latest",
+   "essential":true,
+   "memory":512,
+   "cpu":256,
+
+   "portMappings": [
+    {
+     "containerPort":5000,
+     "hostPort":5000
+    }
+   ],
+
+   "environment": [
+    {
+     "name":"MONGO_URI",
+     "value":"mongodb+srv://dharna:blWpDeIYyAXyZSBu@cluster0.akqg0vf.mongodb.net/aws1?retryWrites=true&w=majority"
+    }
+   ]
+  }
+ ]
+}

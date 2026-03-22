@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: backend
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: backend
+ template:
+  metadata:
+   labels:
+     app: backend
+  spec: 
+   containers:
+   - name: backend
+     image: backend-app:latest
+     imagePullPolicy: Never
+     ports:
+     - containerPort: 5000
+     env:
+     - name: MONGO_URI
+       value: "mongodb+srv://dharna:blWpDelYyAXyZSBu@cluster0.akqg0vf.mongodb.net/aws"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
