@@ -9,14 +9,15 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
-  - uses: actions/checkout@v3
+   - name: Checkout code   
+     uses: actions/checkout@v3
 
-  - name: Build Docker
-    run: |
-     echo "Files in repo:"
-     ls -la
-
-   - name: Debug files
+   - name: Build Docker
      run: |
-      echo  "Starting Docker Build..."
-      docker build -t backend-app .
+      echo "Files in repo:"
+      ls -la
+
+    - name: Debug files
+      run: |
+       echo  "Starting Docker Build..."
+       docker build -t backend-app .
