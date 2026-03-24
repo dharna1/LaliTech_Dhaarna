@@ -14,10 +14,10 @@ jobs:
 
    - name: Build Docker
      run: |
-      echo "Files in repo:"
-      ls -la
+       echo "Files in repo:"
+       ls -la
 
     - name: Debug files
       run: |
-       echo  "Starting Docker Build..."
-       docker build -t backend-app .
+        echo  "Starting Docker Build..."
+        docker build -t backend-app .
