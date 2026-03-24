@@ -18,6 +18,6 @@ jobs:
        ls -la
 
    - name: Debug files
-      run: |
-        echo  "Starting Docker Build..."
-        docker build -t backend-app .
+     run: |
+       echo  "Starting Docker Build..."
+       docker build -t backend-app .
