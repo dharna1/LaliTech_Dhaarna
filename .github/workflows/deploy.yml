@@ -17,7 +17,7 @@ jobs:
        echo "Files in repo:"
        ls -la
 
-    - name: Debug files
+   - name: Debug files
       run: |
         echo  "Starting Docker Build..."
         docker build -t backend-app .
